@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.buildings {
+  width: 200vw;
+  height: 60vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: buildingMovement linear 5s infinite;
+
+}
+.buildings > img {
+  width: 100%;
+  height: 60vh;
+}
+
+.track {
+  width: 700vw;
+  height: 40vh;
+  background-image: url("track.png");
+  position: absolute;
+  animation:trackMovement linear 0.2s infinite;
+}
+
+.car {
+  background-image: url("car_body.png");
+  width: 700px;
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 300px;
+  bottom: 150px;
+  animation:carShake linear 3s infinite;
+}
+
+.tire-front {
+  
+  width:105px;
+  height:105px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position:relative;
+  left:450px;
+  bottom:-95px;
+ animation: wheelRotation linear .2s infinite;
+}
+.tire-rear {
+  
+  width:105px;
+  height:105px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position:relative;
+  left:98px;
+  bottom:15px;
+  animation: wheelRotation linear .2s infinite;
+}
+img{
+    width:100%;
+}
+ body{
+     overflow:hidden;
+ }
+@keyframes wheelRotation{
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes trackMovement{
+    100%{
+        transform:translateX(-500vw);
+    }
+}
+@keyframes buildingMovement{
+    100%{
+        transform:translateX(-100vw);
+    }
+}
+
+@keyframes carShake {
+    0%{
+        transform:translateY(5px);
+    }
+    50%{
+        transform:translateY(-5px);
+    }
+    100%{
+        transform:translateY(5px);
+    }
+    
+}
